@@ -378,7 +378,6 @@ footer .logo {
   display: block;
 
   background-color: var(--secondary-bg-color);
-  cursor: pointer;
 
   font-weight: 500;
   font-size: 16px;
@@ -700,4 +699,200 @@ footer .logo {
 .modal-close svg {
   width: 11px;
   height: 11px;
+  fill: var(--primary-text-color);
+}
+
+.modal-close:focus svg,
+.modal-close:hover svg {
+  fill: var(--accent);
+}
+
+.subscribe {
+  margin-left: auto;
+}
+
+.subscribe-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: var(--primary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--white);
+}
+
+.subscribe-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.subscribe-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 700;
+
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+
+  background-image: url(../images/icon-send.svg);
+}
+
+.modal-title {
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.input-row {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+
+  color: var(--secondary-text-color);
+}
+
+.input-comment {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.modal-submit {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  height: 50px;
+
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 700;
+
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+}
+
+.agree a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.input-block {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+
+  fill: black;
+}
+
+.input-row:focus,
+.input-comment:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+
+.input-row:focus ~ .modal-icon {
+  fill: var(--accent);
+}
+
+.checkbox{
+  margin-right: 7px;
+
+  position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.checkbox-label{
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label::before{
+  content: "";
+  display: inline-block;
+
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid  #212121;
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-label::before{
+  background-color: var(--icon-accent);
+  border: none;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
 }
